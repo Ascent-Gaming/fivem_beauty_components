@@ -12,10 +12,8 @@ const Render = ({ children }) => {
   const [isRendering, setIsRendering] = useState(false)
 
   const handleRenderMessage = useCallback((e) => {
-    const shouldRender = e.data.render
-
-    if (shouldRender !== undefined) {
-      setIsRendering(shouldRender)
+    if (e.data.render !== undefined) {
+      setIsRendering(e.data.render)
     }
   }, [setIsRendering])
 
